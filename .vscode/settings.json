@@ -2,6 +2,7 @@
     "files.associations": {
         "limits": "cpp",
         "vector": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "ctime": "cpp"
     }
 }
