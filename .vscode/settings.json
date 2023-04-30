@@ -3,6 +3,9 @@
         "limits": "cpp",
         "vector": "cpp",
         "ostream": "cpp",
-        "ctime": "cpp"
+        "ctime": "cpp",
+        "xstddef": "cpp",
+        "iostream": "cpp",
+        "xstring": "cpp"
     }
 }
