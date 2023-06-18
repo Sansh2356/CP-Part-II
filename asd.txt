@@ -1,0 +1,57 @@
+report:-
+heading
+name of place 
+date
+reporter name
+memo writing:-
+organization's name
+full address/location on behalf of which you are writing
+memorendum
+to and from
+subject for memo.
+email writing:-
+to,from and subject
+formal letter or cover letter:-
+sender name and address
+date
+receivers address
+subject
+dear
+body
+minutes of meeting:-
+topic
+attendes and absentees
+meeting objectives
+name,objective to speak upon,time
+name,action to be taken,dedline
+----------------------------------------------------------------------------------------------------------------
+7C's of communication
+1)concrete
+2)clear
+3)concise
+4)coherent
+5)courteous
+6)complete
+7)creative
+----------------------------------------------------------------------------------------------------------------
+upward
+downward
+horizontal
+diagonal
+----------------------------------------------------------------------------------------------------------------
+grapewine communication:-
+single-strand chain
+gossip chain
+cluster chain
+probability chain
+---------------------------------------------------------------------------------------------------------------
+Barriers of communication:-
+semantic barrier 
+linguistic barrier
+physical barrier
+cultural barrier
+organizational barrier
+channel media barrier
+environmental barrier
+physchological barrier
+
