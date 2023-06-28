@@ -1,2 +1,2 @@
 
-            cin >> skill;
+                neg_count++;
