@@ -6,6 +6,9 @@
         "ctime": "cpp",
         "xstddef": "cpp",
         "iostream": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "utility": "cpp",
+        "xiosbase": "cpp",
+        "algorithm": "cpp"
     }
 }
