@@ -75,7 +75,10 @@
         "xloctime": "cpp",
         "fstream": "cpp",
         "random": "cpp",
-        "unordered_set": "cpp"
+        "unordered_set": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "complex": "cpp"
     },
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#1a1a1a",
@@ -96,5 +99,6 @@
         "titleBar.inactiveBackground": "#00000099",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#000000"
+    "peacock.color": "#000000",
+    "liveServer.settings.port": 5501
 }

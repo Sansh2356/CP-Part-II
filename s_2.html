@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Limit</title>
+    <script>
+        function countCharacters() {
+            const textarea = document.getElementById('textbox');
+            const countDisplay = document.getElementById('charCount');
+            const maxLength = 100;
+            const currentLength = textarea.value.length;
+            countDisplay.textContent = currentLength + '/' + maxLength;
+            if (currentLength > maxLength) {
+                textarea.value = textarea.value.substring(0, maxLength);
+                countDisplay.textContent = maxLength + '/' + maxLength;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Character Limit</h2>
+    <textarea id="textbox" rows="4" cols="50" oninput="countCharacters()"></textarea>
+    <div id="charCount">0/100</div>
+</body>
+
+</html>
