@@ -79,8 +79,48 @@ void solve()
     }
   }
 }
+// int rec(vector<vector<int>> &books, int shelfWidth, int idx, int widthLeft, int maxi)
+// {
+//   // Making partitions at different indexes such that each partition represents the
+//   // number of shelf along with the books present on those shelf
+//   if (idx >= books.size())
+//   {
+//     return 0;
+//   }
+//   // take and not-take the book//
+//   int not_taken = 0;
+//   int taken =  rec(books, shelfWidth, idx + 1, widthLeft, max(maxi, books[idx][1]));
+//   // if taking the book only when //
+//   if (widthLeft - books[idx][0] >= 0)
+//   {
+//     int not_taken = maxi+rec(books, shelfWidth, idx + 1, widthLeft - books[idx][0], -1);
+//   }
 
+//   return min(taken, not_taken);
+// }
+// class name
+// {
+// public:
+//   name()
+//   {
+//     cout << "samnjsajoifs" << endl;
+//   }
+//   int get_name()
+//   {
+//     cout << "jkasdkasjnd" << endl;
+//   }
+// };
+// class T : public name
+// {
+// public:
+//   static int x;
+//   int *ptr;
+//   int y;
+//   int get_name()
+//   {
+//     cout << "sadjaskndnkasd" << endl;
+//   }
+// };
 int main()
 {
-  solve();
 }
