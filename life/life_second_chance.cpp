@@ -152,53 +152,18 @@
 // 1 2 3 4
 // a0 a1 a2 a3
 //   */
-//5,6,7,0
+// 5,6,7,0
 // }
-
-#include <iostream>
 #include <vector>
-using namespace std;
-bool check()
+#include <unordered_map>
+#include <iostream>
+class TrieNode
 {
-}
-int rec(vector<vector<int>> &adj_mat, int idx, vector<vector<int>> edges, int cost)
-{
-  // base case//
-  if (idx >= edges.size())
+public:
+  TrieNode()
   {
-    return 0;
   }
-  // removing the given edge or not removing it
-  // before removing the edge we must keep in mind that the leftover
-  // graph is also connected i.e. each vertice must have atleast one edge remaining
-  int remove = 0;
-  int not_remove = 0;
-  // not remvoing hence no cost added
-  not_remove = rec(adj_mat, idx + 1, edges, cost);
-
-  // check condition //
-  if (check() == true)
-  {
-    int u = edges[idx][0];
-    int v = edges[idx][1];
-    int like_val = edges[idx][2];
-    adj_mat[u][v] = -(10e9 + 7);
-    adj_mat[v][u] = -(10e9 + 7);
-    remove = like_val + rec(adj_mat, idx + 1, edges, cost + like_val);
-  }
-
-  return max(remove, not_remove);
-}
+};
 int main()
 {
-  int n, m;
-  cin >> n >> m;
-  vector<vector<int>> adj_mat(n, vector<int>(n, -(10e9 + 7)));
-  for (int x = 0; x < m; x++)
-  {
-    long long u, v, weight;
-    cin >> u >> v >> weight;
-    adj_mat[u][v] = weight;
-    adj_mat[v][u] = weight;
-  }
 }

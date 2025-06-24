@@ -3556,9 +3556,6 @@ public:
     cout << endl;
     cout << "INDEX ACCORDING TO KMP IS : " << start_idx << " " << endl;
   }
-  vector<string> fullJustify(vector<string> &words, int maxWidth)
-  {
-  }
 };
 class Graph
 {
@@ -3928,7 +3925,7 @@ public:
       }
     }
   }
-  void countChars( string &str, int l, int r, int &countA, int &countB)
+  void countChars(string &str, int l, int r, int &countA, int &countB)
   {
     countA = 0, countB = 0;
     for (int i = l; i <= r; i++)
@@ -3962,19 +3959,110 @@ public:
       cin >> a >> b >> c >> d;
 
       int A1, B1, A2, B2;
-      countChars(S, a - 1, b - 1, A1, B1); 
+      countChars(S, a - 1, b - 1, A1, B1);
       countChars(T, c - 1, d - 1, A2, B2);
 
       cout << (canTransform(A1, B1, A2, B2) ? "YES" : "NO") << endl;
     }
   }
 };
+class Spreadsheet
+{
+public:
+  vector<vector<int>> spread_sheet;
+  Spreadsheet(int rows)
+  {
+    this->spread_sheet.resize(rows, vector<int>(26, 0));
+  }
+  void setCell(string cell, int value)
+  {
+    string row_str = "";
+    for (int x = 1; x < cell.size(); x++)
+      row_str.push_back(cell[x]);
+    int row = stoi(row_str);
+    this->spread_sheet[row - 1][cell[0] - 'A'] = value;
+  }
+  void resetCell(string cell) { setCell(cell, 0); }
+
+  int getValue(string formula)
+  {
+    string left = "";
+    string right = "";
+    bool flag = true;
+    for (int x = 1; x < formula.size(); x++)
+    {
+      if (formula[x] == '+')
+      {
+        flag = false;
+        continue;
+      }
+      if (flag == false)
+      {
+        right.push_back(formula[x]);
+      }
+      else if (flag == true)
+      {
+        left.push_back(formula[x]);
+      }
+    }
+    int left_val = 0;
+    int right_val = 0;
+    if (left[0] >= 'A' && left[0] <= 'Z')
+    {
+      string temp = "";
+      for (int x = 1; x < left.size(); x++)
+      {
+        temp.push_back(left[x]);
+      }
+      left_val = this->spread_sheet[stoi(temp) - 1][left[0] - 'A'];
+    }
+    else
+    {
+      left_val = stoi(left);
+    }
+    if (right[0] >= 'A' && right[0] <= 'Z')
+    {
+      string temp = "";
+      for (int x = 1; x < right.size(); x++)
+      {
+        temp.push_back(right[x]);
+      }
+      right_val = this->spread_sheet[stoi(temp) - 1][right[0] - 'A'];
+    }
+    else
+    {
+      right_val = stoi(right);
+    }
+    return left_val + right_val;
+  }
+};
 void solve()
 {
-
 }
 int main()
 {
+
+  // Spreadsheet s(3);
+  // cout << "Error" << endl;
+  // s.getValue("=5+7");
+  // cout << "Error" << endl;
+
+  // s.setCell("A1", 10);
+  // cout << "Error" << endl;
+
+  // s.getValue("=A1+6");
+  // cout << "Error" << endl;
+
+  // s.setCell("B2", 15);
+  // cout << "Error" << endl;
+
+  // s.getValue("=A1+B2");
+  // cout << "Error" << endl;
+
+  // s.resetCell("A1");
+  // cout << "Error" << endl;
+
+  // s.getValue("=A1+B2");
   // test to;
   // vector<int> v = {1, 2, 3, 4, 5, 6};
   // to.finalPrices(v);
@@ -4016,10 +4104,10 @@ int main()
   // Graph g(edges, n);
   // g.dijsktra(0);
   // g.print_adj();
-  int t;
-  cin >> t;
-  while (t--)
-  {
-    solve();
-  }
+  // int t;
+  // cin >> t;
+  // while (t--)
+  // {
+  //   solve();
+  // }
 }
